@@ -13,9 +13,9 @@ def about():
     return flask.render_template("layout.html", page_to_insert="about.html")
 
 
-@app.route('/test')
-def test():
-    return flask.render_template("layout.html", page_to_insert="about.html")
+# @app.route('/test')
+# def test():
+#     return flask.render_template("layout.html", page_to_insert="about.html")
 
 
 @app.route('/publications')
