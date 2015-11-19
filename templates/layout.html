@@ -16,7 +16,7 @@
 
 <body>
 <div class="navbar-default navbar-fixed-top">
-    <a class="navbar-brand" href="/">David Karapetyan</a>
+    <a class="navbar-brand" href="{{ url_for('index') }}">David Karapetyan</a>
     <ul class="nav navbar-nav">
         {{ nav_link('index', 'About') }}
         {{ nav_link('resume', 'Resume') }}
