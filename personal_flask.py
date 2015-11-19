@@ -8,16 +8,6 @@ def index():
     return flask.render_template("layout.html", page_to_insert="about.html")
 
 
-@app.route('/about')
-def about():
-    return flask.render_template("layout.html", page_to_insert="about.html")
-
-
-# @app.route('/test')
-# def test():
-#     return flask.render_template("layout.html", page_to_insert="about.html")
-
-
 @app.route('/publications')
 def publications():
     return flask.send_file("static/pdfs/publications.pdf")

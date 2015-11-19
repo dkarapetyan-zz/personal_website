@@ -1,27 +1,26 @@
+{% from "macros.html" import nav_link with context %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {#    need jquery, bootstrap js, and bootstrap css for everything to work#}
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="{{ url_for('static', filename='css/bootstrap.min.css') }}" rel="stylesheet" media="screen">
-    <script src="{{ url_for('static', filename='js/bootstrap.min.js') }}"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script>window.jQuery || document.write('<script src="{{
+  url_for('static', filename='js/jquery.js') }}">\x3C/script>')</script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"
+            crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet" media="screen"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
 </head>
+
 <body>
 <div class="navbar-default navbar-fixed-top">
     <a class="navbar-brand" href="/">David Karapetyan</a>
     <ul class="nav navbar-nav">
-        <li {% if request.url_rule.endpoint in ['about', 'index']  %} class="active" {% endif %}>
-            <a href="{{ url_for('about') }}">About</a>
-        </li>
-        <li {% if request.url_rule.endpoint == 'resume' %} class="active" {% endif %}>
-            <a href="{{ url_for('resume') }}">Resume</a>
-        </li>
-        <li {% if request.url_rule.endpoint == 'publications' %} class="active" {% endif %}>
-            <a href="{{ url_for('publications') }}">Publications</a>
-        </li>
-{#        <li {% if request.url_rule.endpoint == 'test' %} class="active" {% endif %}>#}
-{#            <a href="{{ url_for('test') }}">Test</a>#}
-{#        </li>#}
-
+        {{ nav_link('index', 'About') }}
+        {{ nav_link('resume', 'Resume') }}
+        {{ nav_link('publications', 'Publications') }}
     </ul>
 </div>
 <div class="container">
