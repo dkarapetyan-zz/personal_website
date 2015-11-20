@@ -15,27 +15,86 @@
 </head>
 
 <body>
-<div class="navbar-default navbar-fixed-top">
-    <a class="navbar-brand" href="{{ url_for('index') }}">David Karapetyan</a>
-    <ul class="nav navbar-nav">
-        {{ nav_link('index', 'About') }}
-        {{ nav_link('resume', 'Resume') }}
-        {{ nav_link('publications', 'Publications') }}
-    </ul>
-</div>
-<div class="container">
-    <div class="row">
-        <div class="col-md-5">
-            <br>
-            <br>
-            <br>
-            {% include page_to_insert %}
+
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#mynavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+
+            {#            different nav bar brand depending on screen size#}
+            <a class="navbar-brand" title="David Karapetyan" href="{{ url_for("index") }}">David Karapetyan</a>
         </div>
-        <div class="col-md-4"></div>
-        <div class="col-md-3">
-            <br>
-            <br>
-            <img src="{{ url_for('static', filename='images/cherry_blossoms.jpg') }}" width="250" height="250">
+        <div class="collapse navbar-collapse" id="mynavbar">
+            <ul class="nav navbar-nav">
+                {{ nav_link('index', 'About') }}
+                {{ nav_link('resume', 'Resume') }}
+                {{ nav_link('publications', 'Publications') }}
+            </ul>
+        </div>
+    </div>
+</nav>
+
+{#for non-cell phones and tablets#}
+<div class="visible-md visible-lg">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <br>
+                <br>
+                <br>
+                {% include page_to_insert %}
+            </div>
+            <div class="col-md-4"></div>
+            <div class="col-md-3">
+                <br>
+                <br>
+                <img src="{{ url_for('static', filename='images/cherry_blossoms.jpg') }}" width="200" height="200">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="visible-sm">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-6">
+                <br>
+                <br>
+                <br>
+                {% include page_to_insert %}
+            </div>
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-4">
+                <br>
+                <br>
+                <br>
+                <img src="{{ url_for('static', filename='images/cherry_blossoms.jpg') }}" width="200" height="200">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="visible-xs">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-4">
+            </div>
+            <div class="col-xs-4">
+                <img class="center-block" src="{{ url_for('static', filename='images/cherry_blossoms.jpg') }}"
+                     width="100" height="100">
+            </div>
+            <div class="col-xs-4">
+            </div>
+            <div class="row"></div>
+            <div class="col-xs-12">
+                <br>
+                {% include page_to_insert %}
+            </div>
         </div>
     </div>
 </div>
