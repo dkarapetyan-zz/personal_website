@@ -17,8 +17,8 @@ def publications():
 def resume():
     return flask.send_file("static/pdfs/resume.pdf")
 
-@app.route('/feature-teacher')
-def feature-teacher():
+@app.route('/feature_teacher')
+def feature_teacher():
     return flask.redirect("https://github.com/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb", code=302)
 
 
