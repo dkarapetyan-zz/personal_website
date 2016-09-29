@@ -19,7 +19,7 @@ def resume():
 
 @app.route('/feature-teacher')
 def feature-teacher():
-    return redirect("https://github.com/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb", code=302)
+    return flask.redirect("https://github.com/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb", code=302)
 
 
 
