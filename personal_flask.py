@@ -19,7 +19,7 @@ def resume():
 
 @app.route('/feature_teacher')
 def feature_teacher():
-    url = "http://nbviewer.jupyter.org/github/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb"
+    url = "http://nbviewer.jupyter.org/github/dkarapetyan/feature-teacher/blob/master/feature_teacher.ipynb"
     return flask.redirect(url, code=302)
 
 
