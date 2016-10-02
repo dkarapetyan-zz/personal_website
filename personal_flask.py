@@ -18,7 +18,7 @@ def resume():
     return flask.send_file("static/pdfs/resume.pdf")
 
 @app.route('/feature_teacher_pres')
-def resume():
+def feature_teacher_pres():
     return flask.send_file("static/pdfs/feature_teacher_pres.pdf")
 
 
