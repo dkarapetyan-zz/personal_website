@@ -19,8 +19,8 @@ def resume():
 
 @app.route('/feature_teacher')
 def feature_teacher():
-    return flask.redirect("https://github.com/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb", code=302)
-
+    url = "http://nbviewer.jupyter.org/github/dkarapetyan/feature-teacher/blob/master/feature-teacher.ipynb"
+    return flask.redirect(url, code=302)
 
 
 if __name__ == '__main__':
