@@ -17,10 +17,17 @@ def publications():
 def resume():
     return flask.send_file("static/pdfs/resume.pdf")
 
+@app.route('/feature_teacher_pres')
+def resume():
+    return flask.send_file("static/pdfs/feature_teacher_pres.pdf")
+
+
 @app.route('/feature_teacher')
 def feature_teacher():
     url = "http://nbviewer.jupyter.org/github/dkarapetyan/feature_teacher/blob/master/feature_teacher.ipynb"
     return flask.redirect(url, code=302)
+
+
 
 
 if __name__ == '__main__':
