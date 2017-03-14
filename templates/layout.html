@@ -31,21 +31,20 @@
                                                       src="{{ url_for('static', filename='images/napoleon.gif') }}"></a>
             </div>
             <div class="visible-md visible-sm visible-lg">
-                <a class="navbar-brand" title="DJ Theorem" href="{{ url_for("index") }}">DJ Theorem</a>
+                <a class="navbar-brand" title="David Karapetyan" href="{{ url_for("index") }}">David Karapetyan</a>
             </div>
         </div>
         <div class="collapse navbar-collapse" id="mynavbar">
             <ul class="nav navbar-nav">
-                {{ nav_link('index', 'News') }}
                 {{ nav_link('about', 'About') }}
-                {{ nav_link('events', 'Events') }}
                 {{ nav_link('music', 'Music') }}
+{#                {{ nav_link('events', 'Events') }}#}
                 {{ nav_link('contact', 'Contact') }}
             </ul>
             <ul class='nav navbar-nav navbar-right'>
-                <li><a href='http://www.twitter.com/dj_theorem'>
-                    <i class='fa fa-twitter'></i></a></li>
-                <li><a href='http://www.soundcloud.com/djtheorem'>
+{#                <li><a href='http://www.twitter.com/dj_theorem'>#}
+{#                    <i class='fa fa-twitter'></i></a></li>#}
+                <li><a href='http://www.soundcloud.com/davidkarapetyan'>
                     <i class='fa fa-soundcloud'></i></a></li>
             </ul>
         </div>

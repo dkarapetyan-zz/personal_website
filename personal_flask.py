@@ -5,7 +5,7 @@ app = flask.Flask(__name__, static_folder='static', template_folder='templates')
 
 @app.route('/')
 def index():
-    return flask.render_template("layout.html", page_to_insert="news.html")
+    return flask.render_template("layout.html", page_to_insert="music.html")
 
 
 @app.route('/about')
