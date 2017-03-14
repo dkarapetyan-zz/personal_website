@@ -1,1 +1,1 @@
-web: gunicorn music_flask:app --log-file=-
+web: gunicorn personal_flask:app --log-file=-
